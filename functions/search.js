@@ -16,19 +16,22 @@ const search = function (req, res, next) {
                 $el.find('div[class=flw-item]').each((i, el) => {
                     const $el = $(el);
                     const title = $el.find('a[class=dynamic-name]').text();
-                    const link = $el.find('a[class=dynamic-name]').attr('href');
+                    const link = `https://zoro.to${$el.find('a[class=dynamic-name]').attr('href')}`;
                     const episodes = $el.find('.film-poster').text().split('Ep')[1].replace(/\n/g, '').replace(/\s/g, '');
                     const duration = $el.find('.fd-infor').text().split('m')[0].match(/\d+/)[0] + 'm';
+                    var languages = $el.find('.tick-item').text().substring(0, 6).replace(/\n/g, '').replace(/\s/g, '');
+                    if (languages === 'SUBDUB') languages = 'SUB,DUB';
                     results.results.push({
                         title,
                         episodes,
                         duration,
+                        languages,
                         link,
                     });
                     results.amount = results.results.length;
                 });
             }).get();
-            res.send(results);
+            res.json(results);
         });
 };
 
