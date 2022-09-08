@@ -3,7 +3,7 @@ const { search } = require('./functions/search');
 const { pchecker } = require('./helpers/checkparams');
 
 var app = module.exports = express();
-const port = 80;
+const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => res.send('Hello World!'));
 
