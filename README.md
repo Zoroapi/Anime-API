@@ -15,7 +15,8 @@ If you need help using this API, please don't hesistate to contact us. BUT while
 <h2>Endpoint</h2>
 
 <kbd>GET</kbd> `https://www.zoroapi.tk/search?name=<name>`
-<h3>Fetch Example</h3> <kbd>Node.js</kbd>
+
+<h3>Fetch Example</h3>
 
 ```js
 const axios = require("axios");
