@@ -14,7 +14,7 @@ If you need help using this API, please don't hesistate to contact us. BUT while
 
 <h2>Endpoint</h2>
 
-`Get` `https://www.zoroapi.tk/search?name=<name>`
+<kbd>GET</kbd> `https://www.zoroapi.tk/search?name=<name>`
 <h3>Fetch Example</h3> 
 
 ```js
