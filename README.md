@@ -1,1 +1,1 @@
-# zoro-api js
+# Anime API
